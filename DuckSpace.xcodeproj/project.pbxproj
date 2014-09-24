@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01E2E9904D39417C9DCB957A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91ABBD545906487BADFACDA8 /* libPods.a */; };
+		7E18F019EBAF47249CF54ACC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91ABBD545906487BADFACDA8 /* libPods.a */; };
+		AF28C50C19D209A000463524 /* LocationAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */; };
+		AF28C50F19D20D1E00463524 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28C50E19D20D1E00463524 /* RootViewController.swift */; };
+		AF3FE18E19D394BB00B37E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3FE18C19D394BB00B37E51 /* Main.storyboard */; };
+		AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */; };
+		AFEE7F2219C22BEB00669037 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2119C22BEB00669037 /* Images.xcassets */; };
+		AFEE7F2519C22BEB00669037 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2319C22BEB00669037 /* LaunchScreen.xib */; };
+		AFEE7F3119C22BEB00669037 /* DuckSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7F3019C22BEB00669037 /* DuckSpaceTests.swift */; };
+		AFEE7F3C19C2321900669037 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEE7F3B19C2321900669037 /* CoreBluetooth.framework */; };
+		AFEE7F3E19C2322200669037 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEE7F3D19C2322200669037 /* CoreLocation.framework */; };
+		AFEE7F4019C2323500669037 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEE7F3F19C2323500669037 /* SystemConfiguration.framework */; };
+		AFEE7F4319C24AE500669037 /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7F4219C24AE500669037 /* BeaconManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFEE7F2B19C22BEB00669037 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFEE7F0D19C22BEA00669037 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFEE7F1419C22BEA00669037;
+			remoteInfo = DuckSpace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5E0F41FBC892417693925758 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		91ABBD545906487BADFACDA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationAuthorizationViewController.swift; path = ViewControllers/LocationAuthorizationViewController.swift; sourceTree = "<group>"; };
+		AF28C50E19D20D1E00463524 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ViewControllers/RootViewController.swift; sourceTree = "<group>"; };
+		AF3FE18D19D394BB00B37E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFEE7F1519C22BEB00669037 /* DuckSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuckSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFEE7F1919C22BEB00669037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFEE7F2119C22BEB00669037 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AFEE7F2419C22BEB00669037 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AFEE7F2A19C22BEB00669037 /* DuckSpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuckSpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFEE7F2F19C22BEB00669037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFEE7F3019C22BEB00669037 /* DuckSpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuckSpaceTests.swift; sourceTree = "<group>"; };
+		AFEE7F3A19C22E6900669037 /* DuckSpace-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DuckSpace-Bridging-Header.h"; sourceTree = "<group>"; };
+		AFEE7F3B19C2321900669037 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		AFEE7F3D19C2322200669037 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AFEE7F3F19C2323500669037 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AFEE7F4219C24AE500669037 /* BeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconManager.swift; path = Managers/BeaconManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFEE7F1219C22BEA00669037 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEE7F4019C2323500669037 /* SystemConfiguration.framework in Frameworks */,
+				AFEE7F3E19C2322200669037 /* CoreLocation.framework in Frameworks */,
+				AFEE7F3C19C2321900669037 /* CoreBluetooth.framework in Frameworks */,
+				01E2E9904D39417C9DCB957A /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEE7F2719C22BEB00669037 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E18F019EBAF47249CF54ACC /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D22A2FFA28A43E395D752FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE7F3F19C2323500669037 /* SystemConfiguration.framework */,
+				AFEE7F3D19C2322200669037 /* CoreLocation.framework */,
+				AFEE7F3B19C2321900669037 /* CoreBluetooth.framework */,
+				91ABBD545906487BADFACDA8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF28C50A19D2097E00463524 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */,
+				AF28C50E19D20D1E00463524 /* RootViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AFEE7F0C19C22BEA00669037 = {
+			isa = PBXGroup;
+			children = (
+				AFEE7F1719C22BEB00669037 /* DuckSpace */,
+				AFEE7F2D19C22BEB00669037 /* DuckSpaceTests */,
+				AFEE7F1619C22BEB00669037 /* Products */,
+				5E0F41FBC892417693925758 /* Pods.xcconfig */,
+				5D22A2FFA28A43E395D752FE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AFEE7F1619C22BEB00669037 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE7F1519C22BEB00669037 /* DuckSpace.app */,
+				AFEE7F2A19C22BEB00669037 /* DuckSpaceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFEE7F1719C22BEB00669037 /* DuckSpace */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */,
+				AFEE7F3A19C22E6900669037 /* DuckSpace-Bridging-Header.h */,
+				AFEE7F2119C22BEB00669037 /* Images.xcassets */,
+				AFEE7F2319C22BEB00669037 /* LaunchScreen.xib */,
+				AF3FE18C19D394BB00B37E51 /* Main.storyboard */,
+				AFEE7F4119C24AB100669037 /* Managers */,
+				AFEE7F1819C22BEB00669037 /* Supporting Files */,
+				AF28C50A19D2097E00463524 /* ViewControllers */,
+			);
+			path = DuckSpace;
+			sourceTree = "<group>";
+		};
+		AFEE7F1819C22BEB00669037 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE7F1919C22BEB00669037 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFEE7F2D19C22BEB00669037 /* DuckSpaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE7F3019C22BEB00669037 /* DuckSpaceTests.swift */,
+				AFEE7F2E19C22BEB00669037 /* Supporting Files */,
+			);
+			path = DuckSpaceTests;
+			sourceTree = "<group>";
+		};
+		AFEE7F2E19C22BEB00669037 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE7F2F19C22BEB00669037 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFEE7F4119C24AB100669037 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AFEE7F4219C24AE500669037 /* BeaconManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFEE7F1419C22BEA00669037 /* DuckSpace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFEE7F3419C22BEB00669037 /* Build configuration list for PBXNativeTarget "DuckSpace" */;
+			buildPhases = (
+				9BA86DBC98B44F4DAD3D422A /* Check Pods Manifest.lock */,
+				AFEE7F1119C22BEA00669037 /* Sources */,
+				AFEE7F1219C22BEA00669037 /* Frameworks */,
+				AFEE7F1319C22BEA00669037 /* Resources */,
+				B4C57CF0F9FC48858BABA97D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DuckSpace;
+			productName = DuckSpace;
+			productReference = AFEE7F1519C22BEB00669037 /* DuckSpace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFEE7F2919C22BEB00669037 /* DuckSpaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFEE7F3719C22BEB00669037 /* Build configuration list for PBXNativeTarget "DuckSpaceTests" */;
+			buildPhases = (
+				ACE7192FF0EA45A79B21EF87 /* Check Pods Manifest.lock */,
+				AFEE7F2619C22BEB00669037 /* Sources */,
+				AFEE7F2719C22BEB00669037 /* Frameworks */,
+				AFEE7F2819C22BEB00669037 /* Resources */,
+				10CF15126805442F89C69A84 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFEE7F2C19C22BEB00669037 /* PBXTargetDependency */,
+			);
+			name = DuckSpaceTests;
+			productName = DuckSpaceTests;
+			productReference = AFEE7F2A19C22BEB00669037 /* DuckSpaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFEE7F0D19C22BEA00669037 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Robert Manson";
+				TargetAttributes = {
+					AFEE7F1419C22BEA00669037 = {
+						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					AFEE7F2919C22BEB00669037 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = AFEE7F1419C22BEA00669037;
+					};
+				};
+			};
+			buildConfigurationList = AFEE7F1019C22BEA00669037 /* Build configuration list for PBXProject "DuckSpace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFEE7F0C19C22BEA00669037;
+			productRefGroup = AFEE7F1619C22BEB00669037 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFEE7F1419C22BEA00669037 /* DuckSpace */,
+				AFEE7F2919C22BEB00669037 /* DuckSpaceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFEE7F1319C22BEA00669037 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF3FE18E19D394BB00B37E51 /* Main.storyboard in Resources */,
+				AFEE7F2519C22BEB00669037 /* LaunchScreen.xib in Resources */,
+				AFEE7F2219C22BEB00669037 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEE7F2819C22BEB00669037 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10CF15126805442F89C69A84 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BA86DBC98B44F4DAD3D422A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ACE7192FF0EA45A79B21EF87 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4C57CF0F9FC48858BABA97D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFEE7F1119C22BEA00669037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEE7F4319C24AE500669037 /* BeaconManager.swift in Sources */,
+				AF28C50C19D209A000463524 /* LocationAuthorizationViewController.swift in Sources */,
+				AF28C50F19D20D1E00463524 /* RootViewController.swift in Sources */,
+				AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFEE7F2619C22BEB00669037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEE7F3119C22BEB00669037 /* DuckSpaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFEE7F2C19C22BEB00669037 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFEE7F1419C22BEA00669037 /* DuckSpace */;
+			targetProxy = AFEE7F2B19C22BEB00669037 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF3FE18C19D394BB00B37E51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF3FE18D19D394BB00B37E51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFEE7F2319C22BEB00669037 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFEE7F2419C22BEB00669037 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFEE7F3219C22BEB00669037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFEE7F3319C22BEB00669037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFEE7F3519C22BEB00669037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E0F41FBC892417693925758 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DuckSpace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DuckSpace/DuckSpace-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		AFEE7F3619C22BEB00669037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E0F41FBC892417693925758 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DuckSpace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DuckSpace/DuckSpace-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		AFEE7F3819C22BEB00669037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E0F41FBC892417693925758 /* Pods.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DuckSpaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DuckSpace.app/DuckSpace";
+			};
+			name = Debug;
+		};
+		AFEE7F3919C22BEB00669037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E0F41FBC892417693925758 /* Pods.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DuckSpaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DuckSpace.app/DuckSpace";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFEE7F1019C22BEA00669037 /* Build configuration list for PBXProject "DuckSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFEE7F3219C22BEB00669037 /* Debug */,
+				AFEE7F3319C22BEB00669037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFEE7F3419C22BEB00669037 /* Build configuration list for PBXNativeTarget "DuckSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFEE7F3519C22BEB00669037 /* Debug */,
+				AFEE7F3619C22BEB00669037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFEE7F3719C22BEB00669037 /* Build configuration list for PBXNativeTarget "DuckSpaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFEE7F3819C22BEB00669037 /* Debug */,
+				AFEE7F3919C22BEB00669037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFEE7F0D19C22BEA00669037 /* Project object */;
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="me9-NR-0bM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="Uxe-FH-nJQ">
+            <objects>
+                <tableViewController id="YXA-E6-9cb" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ogr-h7-iM1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hjz-Bs-cfO">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hjz-Bs-cfO" id="Xwf-kQ-HZy">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YXA-E6-9cb" id="Haf-II-fg6"/>
+                            <outlet property="delegate" destination="YXA-E6-9cb" id="cth-Sn-wAy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="vWN-8j-xlh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEH-mE-6FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1291" y="731"/>
+        </scene>
+        <!--Location Authorization View Controller-->
+        <scene sceneID="QnH-T7-C6B">
+            <objects>
+                <viewController storyboardIdentifier="LocationAuthorization" id="enH-JR-vAL" customClass="LocationAuthorizationViewController" customModule="DuckSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mbw-H0-9BH"/>
+                        <viewControllerLayoutGuide type="bottom" id="sr9-Sg-ReN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dgg-lV-MxP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please authorize location to use DuckSpace" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9T-ze-bjy">
+                                <rect key="frame" x="131" y="289" width="338" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gk4-7X-JYw">
+                                <rect key="frame" x="254" y="318" width="92" height="30"/>
+                                <state key="normal" title="Allow Access">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="allowAccessAction:" destination="enH-JR-vAL" eventType="touchUpInside" id="luZ-rD-aRL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y9T-ze-bjy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dgg-lV-MxP" secondAttribute="leadingMargin" constant="10" id="5zT-Ie-Jby"/>
+                            <constraint firstAttribute="centerX" secondItem="Y9T-ze-bjy" secondAttribute="centerX" id="Ftc-t8-yRD"/>
+                            <constraint firstItem="Gk4-7X-JYw" firstAttribute="top" secondItem="Y9T-ze-bjy" secondAttribute="bottom" constant="8" id="YPG-fk-6Nr"/>
+                            <constraint firstAttribute="centerX" secondItem="Gk4-7X-JYw" secondAttribute="centerX" id="hpj-1x-wCM"/>
+                            <constraint firstAttribute="centerY" secondItem="Y9T-ze-bjy" secondAttribute="centerY" constant="0.5" id="wKQ-5F-DWB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="pVF-pa-das" kind="presentation" identifier="LocationAccessDenied" id="n08-Gw-yj9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbR-of-9bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1291" y="23"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hGd-o6-FmI">
+            <objects>
+                <viewController id="pVF-pa-das" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Sg-pp-nWV"/>
+                        <viewControllerLayoutGuide type="bottom" id="uNC-bV-1yK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lja-bd-wCS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please go to settings and authorize location services for DuckSpace" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzo-Fr-htt">
+                                <rect key="frame" x="39" y="289" width="522" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bzo-Fr-htt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lja-bd-wCS" secondAttribute="leadingMargin" constant="10" id="Mqm-Ov-05q"/>
+                            <constraint firstAttribute="centerX" secondItem="Bzo-Fr-htt" secondAttribute="centerX" id="q43-oC-IQC"/>
+                            <constraint firstAttribute="centerY" secondItem="Bzo-Fr-htt" secondAttribute="centerY" constant="0.5" id="tFm-Rh-F40"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPl-aG-Zbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="23"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="8Qk-nt-xMq">
+            <objects>
+                <navigationController id="me9-NR-0bM" customClass="RootViewController" customModule="DuckSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ik-w4-iro">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YXA-E6-9cb" kind="relationship" relationship="rootViewController" id="bsG-fK-zQ6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIK-42-LSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="731"/>
+        </scene>
+    </scenes>
+</document>
