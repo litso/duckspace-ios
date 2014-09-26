@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01E2E9904D39417C9DCB957A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91ABBD545906487BADFACDA8 /* libPods.a */; };
+		2F502F7E19D6070C0023D1C9 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F502F7D19D6070C0023D1C9 /* StyleKit.swift */; };
 		7E18F019EBAF47249CF54ACC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91ABBD545906487BADFACDA8 /* libPods.a */; };
 		AF28C50C19D209A000463524 /* LocationAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */; };
 		AF28C50F19D20D1E00463524 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28C50E19D20D1E00463524 /* RootViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F502F7D19D6070C0023D1C9 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		5E0F41FBC892417693925758 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		91ABBD545906487BADFACDA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationAuthorizationViewController.swift; path = ViewControllers/LocationAuthorizationViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		AFEE7F1719C22BEB00669037 /* DuckSpace */ = {
 			isa = PBXGroup;
 			children = (
+				2F502F7D19D6070C0023D1C9 /* StyleKit.swift */,
 				AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */,
 				AFEE7F3A19C22E6900669037 /* DuckSpace-Bridging-Header.h */,
 				AFEE7F2119C22BEB00669037 /* Images.xcassets */,
@@ -339,6 +342,7 @@
 				AFEE7F4319C24AE500669037 /* BeaconManager.swift in Sources */,
 				AF28C50C19D209A000463524 /* LocationAuthorizationViewController.swift in Sources */,
 				AF28C50F19D20D1E00463524 /* RootViewController.swift in Sources */,
+				2F502F7E19D6070C0023D1C9 /* StyleKit.swift in Sources */,
 				AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
