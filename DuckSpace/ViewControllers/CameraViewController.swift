@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class CameraViewController: UIViewController {
+    @IBOutlet weak var cameraPreview: UIView!
     var session: AVCaptureSession?
     var previewLayer: AVCaptureVideoPreviewLayer?
     var snapper: AVCaptureStillImageOutput?
@@ -23,10 +24,14 @@ class CameraViewController: UIViewController {
         let input:AVCaptureInput = AVCaptureDeviceInput.deviceInputWithDevice(camera, error: nil) as AVCaptureInput
         session?.addInput(input)
         
+        snapper = AVCaptureStillImageOutput()
+        snapper?.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG, AVVideoQualityKey: NSNumber(double: 0.6)]
+        session?.addOutput(snapper)
 
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
-        previewLayer?.frame = UIScreen.mainScreen().bounds
-        view.layer.addSublayer(previewLayer)
+        let screenBounds = UIScreen.mainScreen().bounds
+        previewLayer?.frame = screenBounds
+        cameraPreview.layer.addSublayer(previewLayer)
         session?.startRunning()
     }
     override func didReceiveMemoryWarning() {
@@ -47,6 +52,12 @@ class CameraViewController: UIViewController {
     }
     
 
+    // MARK: - Action
+    
+    @IBAction func takePicture(sender: UIButton) {
+        println("Snap snap")
+    }
+    
     /*
     // MARK: - Navigation
 
