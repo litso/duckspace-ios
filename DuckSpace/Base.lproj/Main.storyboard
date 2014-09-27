@@ -32,6 +32,52 @@
             </objects>
             <point key="canvasLocation" x="1291" y="731"/>
         </scene>
+        <!--Ranging View Controller-->
+        <scene sceneID="8HN-Dk-JKG">
+            <objects>
+                <viewController storyboardIdentifier="Ranging" id="xx5-5W-MSn" customClass="RangingViewController" customModule="DuckSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vix-kY-ld2"/>
+                        <viewControllerLayoutGuide type="bottom" id="c0t-rW-6IZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fdm-EW-ya5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance to DuckSpace: 5m" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jma-mA-wgO">
+                                <rect key="frame" x="193" y="289" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmh-Ed-G8H">
+                                <rect key="frame" x="261" y="318" width="78" height="30"/>
+                                <state key="normal" title="Take Selfie!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeSelfieButtonPressed:" destination="xx5-5W-MSn" eventType="touchUpInside" id="P0V-08-HH6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jma-mA-wgO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fdm-EW-ya5" secondAttribute="leadingMargin" constant="10" id="3bO-XX-RMV"/>
+                            <constraint firstAttribute="centerX" secondItem="Jma-mA-wgO" secondAttribute="centerX" id="6lL-uG-kwv"/>
+                            <constraint firstAttribute="centerY" secondItem="Jma-mA-wgO" secondAttribute="centerY" constant="0.5" id="VVP-Ow-ohJ"/>
+                            <constraint firstItem="fmh-Ed-G8H" firstAttribute="top" secondItem="Jma-mA-wgO" secondAttribute="bottom" constant="8" id="fF5-UO-H8u"/>
+                            <constraint firstAttribute="centerX" secondItem="fmh-Ed-G8H" secondAttribute="centerX" id="vCZ-XI-2Qw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="Jma-mA-wgO" id="oMj-Qb-YHZ"/>
+                        <outlet property="takePhotoButton" destination="fmh-Ed-G8H" id="hd8-Uw-H6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oW9-Eh-2Q4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="731"/>
+        </scene>
         <!--Location Authorization View Controller-->
         <scene sceneID="QnH-T7-C6B">
             <objects>

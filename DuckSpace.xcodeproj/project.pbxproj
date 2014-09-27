@@ -13,6 +13,9 @@
 		AF28C50C19D209A000463524 /* LocationAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */; };
 		AF28C50F19D20D1E00463524 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28C50E19D20D1E00463524 /* RootViewController.swift */; };
 		AF3FE18E19D394BB00B37E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3FE18C19D394BB00B37E51 /* Main.storyboard */; };
+		AFD1BFFF19D743070076651E /* RangingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1BFFE19D743070076651E /* RangingViewController.swift */; };
+		AFD1C00219D7432B0076651E /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00119D7432B0076651E /* Beacons.swift */; };
+		AFD1C00319D7432B0076651E /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00119D7432B0076651E /* Beacons.swift */; };
 		AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */; };
 		AFEE7F2219C22BEB00669037 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2119C22BEB00669037 /* Images.xcassets */; };
 		AFEE7F2519C22BEB00669037 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2319C22BEB00669037 /* LaunchScreen.xib */; };
@@ -40,6 +43,8 @@
 		AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationAuthorizationViewController.swift; path = ViewControllers/LocationAuthorizationViewController.swift; sourceTree = "<group>"; };
 		AF28C50E19D20D1E00463524 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = ViewControllers/RootViewController.swift; sourceTree = "<group>"; };
 		AF3FE18D19D394BB00B37E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFD1BFFE19D743070076651E /* RangingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangingViewController.swift; path = ViewControllers/RangingViewController.swift; sourceTree = "<group>"; };
+		AFD1C00119D7432B0076651E /* Beacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Beacons.swift; path = Models/Beacons.swift; sourceTree = "<group>"; };
 		AFEE7F1519C22BEB00669037 /* DuckSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuckSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEE7F1919C22BEB00669037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,10 +97,19 @@
 		AF28C50A19D2097E00463524 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1BFFE19D743070076651E /* RangingViewController.swift */,
 				AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */,
 				AF28C50E19D20D1E00463524 /* RootViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AFD1C00019D743100076651E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFD1C00119D7432B0076651E /* Beacons.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		AFEE7F0C19C22BEA00669037 = {
@@ -121,13 +135,14 @@
 		AFEE7F1719C22BEB00669037 /* DuckSpace */ = {
 			isa = PBXGroup;
 			children = (
-				2F502F7D19D6070C0023D1C9 /* StyleKit.swift */,
 				AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */,
 				AFEE7F3A19C22E6900669037 /* DuckSpace-Bridging-Header.h */,
 				AFEE7F2119C22BEB00669037 /* Images.xcassets */,
 				AFEE7F2319C22BEB00669037 /* LaunchScreen.xib */,
 				AF3FE18C19D394BB00B37E51 /* Main.storyboard */,
 				AFEE7F4119C24AB100669037 /* Managers */,
+				AFD1C00019D743100076651E /* Models */,
+				2F502F7D19D6070C0023D1C9 /* StyleKit.swift */,
 				AFEE7F1819C22BEB00669037 /* Supporting Files */,
 				AF28C50A19D2097E00463524 /* ViewControllers */,
 			);
@@ -339,11 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD1C00219D7432B0076651E /* Beacons.swift in Sources */,
 				AFEE7F4319C24AE500669037 /* BeaconManager.swift in Sources */,
 				AF28C50C19D209A000463524 /* LocationAuthorizationViewController.swift in Sources */,
 				AF28C50F19D20D1E00463524 /* RootViewController.swift in Sources */,
 				2F502F7E19D6070C0023D1C9 /* StyleKit.swift in Sources */,
 				AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */,
+				AFD1BFFF19D743070076651E /* RangingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEE7F3119C22BEB00669037 /* DuckSpaceTests.swift in Sources */,
+				AFD1C00319D7432B0076651E /* Beacons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

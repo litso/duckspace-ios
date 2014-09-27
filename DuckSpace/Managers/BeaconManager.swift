@@ -11,7 +11,8 @@ import UIKit
 
 // General search criteria for beacons that are broadcasting
 let BEACON_SERVICE_NAME = "estimote"
-let BEACON_PROXIMITY_UUID = NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
+//let BEACON_PROXIMITY_UUID = NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
+let BEACON_PROXIMITY_UUID = NSUUID(UUIDString: "4C93C87C-9CD5-4703-8FCE-E87DBC34309C")
 
 // Beacons are hardcoded into our app so we can easily filter for them in a noisy environment
 let BEACON_PURPLE_MAJOR = "60463"
@@ -25,7 +26,7 @@ protocol BeaconManagerAuthorizationDelegate {
     func authorizationCompleted(#wasSuccess: Bool)
 }
 protocol BeaconManagerDiscoveryDelegate {
-    func discoveredBeacon(#major: String, minor: String, proximity: CLProximity)
+    func updatedInRange(#beacons: [CLBeacon])
 }
 class BeaconManager: NSObject, CLLocationManagerDelegate    {
     var locationManager: CLLocationManager = CLLocationManager()
@@ -33,6 +34,7 @@ class BeaconManager: NSObject, CLLocationManagerDelegate    {
     let estimoteRegion: CLBeaconRegion = CLBeaconRegion(proximityUUID:BEACON_PROXIMITY_UUID, identifier:"Estimote Region")
     var authorizationDelegate: BeaconManagerAuthorizationDelegate?
     var discoveryDelegate: BeaconManagerDiscoveryDelegate?
+    var beaconsInRange: [CLBeacon] = []
     class var sharedInstance:BeaconManager {
     return sharedBeaconManager
     }
@@ -99,18 +101,50 @@ class BeaconManager: NSObject, CLLocationManagerDelegate    {
     func locationManager(manager: CLLocationManager!, didRangeBeacons beacons: [CLBeacon]!, inRegion region: CLBeaconRegion!) {
         println("Beacon Manager: didRangeBeacons");
         
-//        for beacon: CLBeacon in beacons {
-//            // TODO: better way to unwrap optionals?
-//            if let major: String = beacon.major?.stringValue? {
-//                if let minor: String = beacon.minor?.stringValue? {
+        
+        for beacon: CLBeacon in beacons {
+            // TODO: better way to unwrap optionals?
+            if let major: String = beacon.major?.stringValue {
+                if let minor: String = beacon.minor?.stringValue {
 //                    let contained: Bool = contains(registeredBeaconMajor, major)
 //                    let active: Bool = (UIApplication.sharedApplication().applicationState == UIApplicationState.Active)
 //                    if contained && active {
-//                        delegate?.discoveredBeacon(major: major, minor: minor, proximity: beacon.proximity)
+//                        discoveryDelegate?.discoveredBeacon(major: major, minor: minor, proximity: beacon.proximity)
 //                    }
-//                }
-//            }
-//        }
+                    
+                    let removeBeacon: CLBeacon -> Bool = { element in
+                        if element.major == beacon.major {
+                            if element.minor == beacon.minor {
+                                return false
+                            }
+                        }
+                        return true
+                    }
+                    
+                    var proximity = ""
+                    switch beacon.proximity {
+                    case .Near:
+                        proximity = "Near"
+                    case .Immediate:
+                        proximity = "Immediate"
+                    case .Far:
+                        proximity = "Far"
+                    case .Unknown:
+                        proximity = "Unknown"
+                    }
+                    
+                    if beacon.accuracy < 5 && beacon.accuracy > 0 {
+                        println("Beacon \(beacon.major) \(beacon.minor) is in \(proximity) vecinity with distance: \(beacon.accuracy)")
+                        beaconsInRange = beaconsInRange.filter(removeBeacon)
+                        beaconsInRange.append(beacon)
+                    }
+                    else {
+                        beaconsInRange = beaconsInRange.filter(removeBeacon)
+                    }
+                }
+            }
+        }
+        discoveryDelegate?.updatedInRange(beacons: beaconsInRange)
     }
     
     // MARK: Private
