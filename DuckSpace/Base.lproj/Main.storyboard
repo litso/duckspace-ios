@@ -90,8 +90,44 @@
                     <view key="view" contentMode="scaleToFill" id="y2y-zD-d90">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJj-7C-pGO" userLabel="Camera Preview">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="0.047118742970000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRI-ee-5P7" userLabel="Take Picture Button" customClass="DuckButton" customModule="DuckSpace" customModuleProvider="target">
+                                <rect key="frame" x="250" y="450" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6bo-bT-E60"/>
+                                    <constraint firstAttribute="height" constant="100" id="Vs7-HH-aaQ"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="GWx-ep-zTT" eventType="touchUpInside" id="Z10-Qp-Z0a"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2TE-ny-tYn" firstAttribute="top" secondItem="kRI-ee-5P7" secondAttribute="bottom" constant="50" id="Geh-cU-JYO"/>
+                            <constraint firstAttribute="height" secondItem="GJj-7C-pGO" secondAttribute="height" id="JTn-1N-DPp"/>
+                            <constraint firstAttribute="centerX" secondItem="kRI-ee-5P7" secondAttribute="centerX" id="Wlv-AG-fSN"/>
+                            <constraint firstAttribute="centerY" secondItem="GJj-7C-pGO" secondAttribute="centerY" id="YOI-Md-iHw"/>
+                            <constraint firstItem="GJj-7C-pGO" firstAttribute="leading" secondItem="y2y-zD-d90" secondAttribute="leadingMargin" id="flk-du-7fM"/>
+                            <constraint firstAttribute="width" secondItem="GJj-7C-pGO" secondAttribute="width" id="jeL-0h-PDv"/>
+                            <constraint firstAttribute="centerX" secondItem="GJj-7C-pGO" secondAttribute="centerX" id="nIQ-UG-qLV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="flk-du-7fM"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cameraPreview" destination="GJj-7C-pGO" id="UL9-jT-RTi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYM-k6-ygL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
