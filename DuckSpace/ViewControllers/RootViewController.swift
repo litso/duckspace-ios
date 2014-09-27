@@ -74,6 +74,10 @@ class RootViewController: UINavigationController, BeaconManagerDiscoveryDelegate
         let nearestBeacon = inRange[0]
         let beacon = Beacon.fromRaw(nearestBeacon.minor)
         rangingViewController?.distanceLabel.text = "Nearest DuckSpace is \(beacon!.stringValue()): \(nearestBeacon.accuracy)"
+        
+        if nearestBeacon.accuracy < 3 {
+            rangingViewController?.selfieTime()
+        }
     }
     /*
     // MARK: - Navigation

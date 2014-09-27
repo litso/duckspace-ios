@@ -57,6 +57,7 @@
                                 </state>
                                 <connections>
                                     <action selector="takeSelfieButtonPressed:" destination="xx5-5W-MSn" eventType="touchUpInside" id="P0V-08-HH6"/>
+                                    <segue destination="GWx-ep-zTT" kind="show" identifier="TakePhotoSegue" id="xbb-IO-JgK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,6 +78,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oW9-Eh-2Q4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1982" y="731"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="ERs-TZ-CvQ">
+            <objects>
+                <viewController id="GWx-ep-zTT" customClass="CameraViewController" customModule="DuckSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ah1-AI-IMt"/>
+                        <viewControllerLayoutGuide type="bottom" id="2TE-ny-tYn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y2y-zD-d90">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYM-k6-ygL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2734" y="731"/>
         </scene>
         <!--Location Authorization View Controller-->
         <scene sceneID="QnH-T7-C6B">
