@@ -16,6 +16,8 @@
 		AFD1BFFF19D743070076651E /* RangingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1BFFE19D743070076651E /* RangingViewController.swift */; };
 		AFD1C00219D7432B0076651E /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00119D7432B0076651E /* Beacons.swift */; };
 		AFD1C00319D7432B0076651E /* Beacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00119D7432B0076651E /* Beacons.swift */; };
+		AFD1C00519D75A1E0076651E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1C00419D75A1E0076651E /* AVFoundation.framework */; };
+		AFD1C00719D75C9D0076651E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00619D75C9D0076651E /* CameraViewController.swift */; };
 		AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */; };
 		AFEE7F2219C22BEB00669037 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2119C22BEB00669037 /* Images.xcassets */; };
 		AFEE7F2519C22BEB00669037 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2319C22BEB00669037 /* LaunchScreen.xib */; };
@@ -45,6 +47,8 @@
 		AF3FE18D19D394BB00B37E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFD1BFFE19D743070076651E /* RangingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangingViewController.swift; path = ViewControllers/RangingViewController.swift; sourceTree = "<group>"; };
 		AFD1C00119D7432B0076651E /* Beacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Beacons.swift; path = Models/Beacons.swift; sourceTree = "<group>"; };
+		AFD1C00419D75A1E0076651E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AFD1C00619D75C9D0076651E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ViewControllers/CameraViewController.swift; sourceTree = "<group>"; };
 		AFEE7F1519C22BEB00669037 /* DuckSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuckSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEE7F1919C22BEB00669037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD1C00519D75A1E0076651E /* AVFoundation.framework in Frameworks */,
 				AFEE7F4019C2323500669037 /* SystemConfiguration.framework in Frameworks */,
 				AFEE7F3E19C2322200669037 /* CoreLocation.framework in Frameworks */,
 				AFEE7F3C19C2321900669037 /* CoreBluetooth.framework in Frameworks */,
@@ -86,6 +91,7 @@
 		5D22A2FFA28A43E395D752FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1C00419D75A1E0076651E /* AVFoundation.framework */,
 				AFEE7F3F19C2323500669037 /* SystemConfiguration.framework */,
 				AFEE7F3D19C2322200669037 /* CoreLocation.framework */,
 				AFEE7F3B19C2321900669037 /* CoreBluetooth.framework */,
@@ -100,6 +106,7 @@
 				AFD1BFFE19D743070076651E /* RangingViewController.swift */,
 				AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */,
 				AF28C50E19D20D1E00463524 /* RootViewController.swift */,
+				AFD1C00619D75C9D0076651E /* CameraViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 				AF28C50C19D209A000463524 /* LocationAuthorizationViewController.swift in Sources */,
 				AF28C50F19D20D1E00463524 /* RootViewController.swift in Sources */,
 				2F502F7E19D6070C0023D1C9 /* StyleKit.swift in Sources */,
+				AFD1C00719D75C9D0076651E /* CameraViewController.swift in Sources */,
 				AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */,
 				AFD1BFFF19D743070076651E /* RangingViewController.swift in Sources */,
 			);

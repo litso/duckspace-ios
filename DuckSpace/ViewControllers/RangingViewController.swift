@@ -22,12 +22,16 @@ class RangingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func takeSelfieButtonPressed(sender: UIButton) {
-        UIAlertView(title: "Looking Good", message: "Keep at it bro", delegate: nil, cancelButtonTitle: "Roger that")
+        performSegueWithIdentifier("TakePhotoSegue", sender: self)
     }
     func outOfRange(dismissed: Void -> Void) {
+        takePhotoButton.hidden = true
         dismissViewControllerAnimated(false) {
             dismissed()
         }
+    }
+    func selfieTime() {
+        takePhotoButton.hidden = false
     }
     /*
     // MARK: - Navigation
