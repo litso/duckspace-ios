@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="me9-NR-0bM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="me9-NR-0bM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -8,6 +8,7 @@
         <!--Root View Controller-->
         <scene sceneID="Uxe-FH-nJQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEH-mE-6FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="YXA-E6-9cb" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ogr-h7-iM1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -28,9 +29,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="vWN-8j-xlh"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bEH-mE-6FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1291" y="731"/>
+            <point key="canvasLocation" x="1291" y="1191"/>
         </scene>
         <!--Ranging View Controller-->
         <scene sceneID="8HN-Dk-JKG">
@@ -44,8 +44,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance to DuckSpace: 5m" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jma-mA-wgO">
-                                <rect key="frame" x="193" y="289" width="214" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Distance to DuckSpace: (n/a)" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jma-mA-wgO">
+                                <rect key="frame" x="194" y="289" width="224" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,6 +76,8 @@
                             <constraint firstAttribute="centerX" secondItem="fmh-Ed-G8H" secondAttribute="centerX" id="vCZ-XI-2Qw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fvt-dk-QvK"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="distanceLabel" destination="Jma-mA-wgO" id="oMj-Qb-YHZ"/>
                         <outlet property="radarView" destination="m8J-hf-l6v" id="WLv-XV-rno"/>
@@ -270,18 +272,18 @@
         <!--Root View Controller-->
         <scene sceneID="8Qk-nt-xMq">
             <objects>
-                <navigationController id="me9-NR-0bM" customClass="RootViewController" customModule="DuckSpace" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="me9-NR-0bM" customClass="RootViewController" customModule="DuckSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ik-w4-iro">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="YXA-E6-9cb" kind="relationship" relationship="rootViewController" id="bsG-fK-zQ6"/>
+                        <segue destination="xx5-5W-MSn" kind="relationship" relationship="rootViewController" id="UeW-rH-wuH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIK-42-LSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="444" y="731"/>
+            <point key="canvasLocation" x="510" y="731"/>
         </scene>
     </scenes>
 </document>
