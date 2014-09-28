@@ -13,8 +13,10 @@ class RangingViewController: UIViewController {
 
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var radarView: RadarView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        radarView.startAnimation()
         takePhotoButton.hidden = true
     }
     override func didReceiveMemoryWarning() {
