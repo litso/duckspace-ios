@@ -31,7 +31,7 @@ public class StyleKit : NSObject {
         let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [gradientColor3.CGColor, UIColor(red: 0.441, green: 0.614, blue: 0.333, alpha: 0.500).CGColor, lightGreenBorder.CGColor], [0, 0.38, 1])
 
         //// Rectangle Drawing
-        let rectanglePath = UIBezierPath(rect: CGRectMake(0, 0, 150, 150))
+        let rectanglePath = UIBezierPath(rect: CGRectMake(frame.minX, frame.minY, 150, 150))
         darkGreenFill.setFill()
         rectanglePath.fill()
 
@@ -40,8 +40,8 @@ public class StyleKit : NSObject {
         //// HGrid
         //// Bezier 9 Drawing
         var bezier9Path = UIBezierPath()
-        bezier9Path.moveToPoint(CGPointMake(0, 138.5))
-        bezier9Path.addLineToPoint(CGPointMake(150, 138.5))
+        bezier9Path.moveToPoint(CGPointMake(frame.minX, frame.minY + 138.5))
+        bezier9Path.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 138.5))
         darkGreenBorder.setStroke()
         bezier9Path.lineWidth = 1
         bezier9Path.stroke()
@@ -49,8 +49,8 @@ public class StyleKit : NSObject {
 
         //// Bezier 8 Drawing
         var bezier8Path = UIBezierPath()
-        bezier8Path.moveToPoint(CGPointMake(0, 122.5))
-        bezier8Path.addLineToPoint(CGPointMake(150, 122.5))
+        bezier8Path.moveToPoint(CGPointMake(frame.minX, frame.minY + 122.5))
+        bezier8Path.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 122.5))
         darkGreenBorder.setStroke()
         bezier8Path.lineWidth = 1
         bezier8Path.stroke()
@@ -58,8 +58,8 @@ public class StyleKit : NSObject {
 
         //// Bezier 7 Drawing
         var bezier7Path = UIBezierPath()
-        bezier7Path.moveToPoint(CGPointMake(0, 106.5))
-        bezier7Path.addLineToPoint(CGPointMake(150, 106.5))
+        bezier7Path.moveToPoint(CGPointMake(frame.minX, frame.minY + 106.5))
+        bezier7Path.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 106.5))
         darkGreenBorder.setStroke()
         bezier7Path.lineWidth = 1
         bezier7Path.stroke()
@@ -67,8 +67,8 @@ public class StyleKit : NSObject {
 
         //// Bezier 6 Drawing
         var bezier6Path = UIBezierPath()
-        bezier6Path.moveToPoint(CGPointMake(0, 90.5))
-        bezier6Path.addLineToPoint(CGPointMake(150, 90.5))
+        bezier6Path.moveToPoint(CGPointMake(frame.minX, frame.minY + 90.5))
+        bezier6Path.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 90.5))
         darkGreenBorder.setStroke()
         bezier6Path.lineWidth = 1
         bezier6Path.stroke()
@@ -76,8 +76,8 @@ public class StyleKit : NSObject {
 
         //// Bezier 5 Drawing
         var bezier5Path = UIBezierPath()
-        bezier5Path.moveToPoint(CGPointMake(0, 10.5))
-        bezier5Path.addLineToPoint(CGPointMake(150, 10.5))
+        bezier5Path.moveToPoint(CGPointMake(frame.minX, frame.minY + 10.5))
+        bezier5Path.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 10.5))
         darkGreenBorder.setStroke()
         bezier5Path.lineWidth = 1
         bezier5Path.stroke()
@@ -85,8 +85,8 @@ public class StyleKit : NSObject {
 
         //// Bezier 4 Drawing
         var bezier4Path = UIBezierPath()
-        bezier4Path.moveToPoint(CGPointMake(0, 26.5))
-        bezier4Path.addLineToPoint(CGPointMake(150, 26.5))
+        bezier4Path.moveToPoint(CGPointMake(frame.minX, frame.minY + 26.5))
+        bezier4Path.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 26.5))
         darkGreenBorder.setStroke()
         bezier4Path.lineWidth = 1
         bezier4Path.stroke()
@@ -94,8 +94,8 @@ public class StyleKit : NSObject {
 
         //// Bezier 3 Drawing
         var bezier3Path = UIBezierPath()
-        bezier3Path.moveToPoint(CGPointMake(0, 42.5))
-        bezier3Path.addLineToPoint(CGPointMake(150, 42.5))
+        bezier3Path.moveToPoint(CGPointMake(frame.minX, frame.minY + 42.5))
+        bezier3Path.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 42.5))
         darkGreenBorder.setStroke()
         bezier3Path.lineWidth = 1
         bezier3Path.stroke()
@@ -103,8 +103,8 @@ public class StyleKit : NSObject {
 
         //// Bezier 2 Drawing
         var bezier2Path = UIBezierPath()
-        bezier2Path.moveToPoint(CGPointMake(0, 58.5))
-        bezier2Path.addLineToPoint(CGPointMake(150, 58.5))
+        bezier2Path.moveToPoint(CGPointMake(frame.minX, frame.minY + 58.5))
+        bezier2Path.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 58.5))
         darkGreenBorder.setStroke()
         bezier2Path.lineWidth = 1
         bezier2Path.stroke()
@@ -112,8 +112,8 @@ public class StyleKit : NSObject {
 
         //// Bezier Drawing
         var bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPointMake(0, 74.5))
-        bezierPath.addLineToPoint(CGPointMake(150, 74.5))
+        bezierPath.moveToPoint(CGPointMake(frame.minX, frame.minY + 74.5))
+        bezierPath.addLineToPoint(CGPointMake(frame.minX + 150, frame.minY + 74.5))
         darkGreenBorder.setStroke()
         bezierPath.lineWidth = 1
         bezierPath.stroke()
@@ -123,7 +123,7 @@ public class StyleKit : NSObject {
 
         //// VGrid
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 11.5, 150)
+        CGContextTranslateCTM(context, frame.minX + 11.5, frame.minY + 150)
         CGContextRotateCTM(context, -90 * CGFloat(M_PI) / 180)
 
 
@@ -224,7 +224,7 @@ public class StyleKit : NSObject {
 
         //// Radial
         //// Oval Drawing
-        var ovalPath = UIBezierPath(ovalInRect: CGRectMake(frame.minX, frame.minY, 144.5, 143.5))
+        var ovalPath = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 2.75, frame.minY + 2.75, 144.5, 143.5))
         color.setFill()
         ovalPath.fill()
         lightGreenBorder.setStroke()
@@ -233,28 +233,28 @@ public class StyleKit : NSObject {
 
 
         //// Oval 2 Drawing
-        var oval2Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 16.5, frame.minY + 15.5, 112, 112))
+        var oval2Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 19.25, frame.minY + 18.25, 112, 112))
         lightGreenBorder.setStroke()
         oval2Path.lineWidth = 1
         oval2Path.stroke()
 
 
         //// Oval 3 Drawing
-        var oval3Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 32.5, frame.minY + 31.5, 80, 80))
+        var oval3Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 35.25, frame.minY + 34.25, 80, 80))
         lightGreenBorder.setStroke()
         oval3Path.lineWidth = 1
         oval3Path.stroke()
 
 
         //// Oval 4 Drawing
-        var oval4Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 48.5, frame.minY + 47.5, 48, 48))
+        var oval4Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 51.25, frame.minY + 50.25, 48, 48))
         lightGreenBorder.setStroke()
         oval4Path.lineWidth = 1
         oval4Path.stroke()
 
 
         //// Oval 5 Drawing
-        var oval5Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 64.5, frame.minY + 63.5, 16, 16))
+        var oval5Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + 67.25, frame.minY + 66.25, 16, 16))
         lightGreenBorder.setStroke()
         oval5Path.lineWidth = 1
         oval5Path.stroke()
@@ -264,7 +264,7 @@ public class StyleKit : NSObject {
 
         //// Sweep Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, frame.minX + 72.5, frame.minY + 71.5)
+        CGContextTranslateCTM(context, frame.minX + 75.5, frame.minY + 74.5)
         CGContextRotateCTM(context, -angle * CGFloat(M_PI) / 180)
 
         var sweepPath = UIBezierPath()
@@ -282,7 +282,7 @@ public class StyleKit : NSObject {
 
         //// Sweep Gradient Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, frame.minX + 72.5, frame.minY + 71.5)
+        CGContextTranslateCTM(context, frame.minX + 75.5, frame.minY + 74.5)
         CGContextRotateCTM(context, -angle * CGFloat(M_PI) / 180)
 
         var sweepGradientPath = UIBezierPath()

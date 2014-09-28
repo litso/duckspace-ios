@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="me9-NR-0bM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="me9-NR-0bM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -60,18 +60,25 @@
                                     <segue destination="GWx-ep-zTT" kind="show" identifier="TakePhotoSegue" id="xbb-IO-JgK"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8J-hf-l6v" customClass="RadarView" customModule="DuckSpace" customModuleProvider="target">
+                                <rect key="frame" x="225" y="88" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Jma-mA-wgO" firstAttribute="top" secondItem="m8J-hf-l6v" secondAttribute="bottom" constant="50" id="1FQ-6U-GrV"/>
                             <constraint firstItem="Jma-mA-wgO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fdm-EW-ya5" secondAttribute="leadingMargin" constant="10" id="3bO-XX-RMV"/>
                             <constraint firstAttribute="centerX" secondItem="Jma-mA-wgO" secondAttribute="centerX" id="6lL-uG-kwv"/>
                             <constraint firstAttribute="centerY" secondItem="Jma-mA-wgO" secondAttribute="centerY" constant="0.5" id="VVP-Ow-ohJ"/>
                             <constraint firstItem="fmh-Ed-G8H" firstAttribute="top" secondItem="Jma-mA-wgO" secondAttribute="bottom" constant="8" id="fF5-UO-H8u"/>
+                            <constraint firstAttribute="centerX" secondItem="m8J-hf-l6v" secondAttribute="centerX" id="ffu-Ih-KUM"/>
                             <constraint firstAttribute="centerX" secondItem="fmh-Ed-G8H" secondAttribute="centerX" id="vCZ-XI-2Qw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="distanceLabel" destination="Jma-mA-wgO" id="oMj-Qb-YHZ"/>
+                        <outlet property="radarView" destination="m8J-hf-l6v" id="WLv-XV-rno"/>
                         <outlet property="takePhotoButton" destination="fmh-Ed-G8H" id="hd8-Uw-H6z"/>
                     </connections>
                 </viewController>
