@@ -14,10 +14,12 @@ class RangingViewController: UIViewController {
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var radarView: RadarView!
+    var loaded = false
     override func viewDidLoad() {
         super.viewDidLoad()
         radarView.startAnimation()
         takePhotoButton.hidden = true
+        loaded = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -27,9 +29,11 @@ class RangingViewController: UIViewController {
         performSegueWithIdentifier("TakePhotoSegue", sender: self)
     }
     func outOfRange(dismissed: Void -> Void) {
-        takePhotoButton.hidden = true
-        dismissViewControllerAnimated(false) {
-            dismissed()
+        if loaded {
+            takePhotoButton.hidden = true
+            dismissViewControllerAnimated(false) {
+                dismissed()
+            }
         }
     }
     func selfieTime() {

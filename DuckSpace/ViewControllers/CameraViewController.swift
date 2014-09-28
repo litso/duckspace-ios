@@ -14,6 +14,7 @@ class CameraViewController: UIViewController {
     var session: AVCaptureSession?
     var previewLayer: AVCaptureVideoPreviewLayer?
     var snapper: AVCaptureStillImageOutput?
+    var mySelfie: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,17 +56,27 @@ class CameraViewController: UIViewController {
     // MARK: - Action
     
     @IBAction func takePicture(sender: UIButton) {
-        println("Snap snap")
+        let vc = snapper?.connectionWithMediaType(AVMediaTypeVideo)
+        snapper?.captureStillImageAsynchronouslyFromConnection(vc) {buffer, error in
+            let data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
+            let image = UIImage(data: data)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.session?.stopRunning()
+                self.mySelfie = image
+                self.performSegueWithIdentifier("UploadViewSegue", sender: self)
+                return
+            }
+        }
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let uploadVC = segue.destinationViewController as UploadViewController
+        uploadVC.mySelfie = mySelfie
     }
-    */
-
 }
