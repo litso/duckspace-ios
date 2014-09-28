@@ -13,6 +13,7 @@ class UploadViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var progressView: UIProgressView!
     var mySelfie: UIImage?
+    var mySelfieData: NSData?
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,6 +33,11 @@ class UploadViewController: UIViewController {
     
     @IBAction func uploadButtonPressed(sender: UIButton) {
         progressView.hidden = false
+        HttpClient.sharedInstance.postImage(mySelfieData!, onError: { error in
+            
+            }) {
+                println("Success")
+        }
     }
 
     /*

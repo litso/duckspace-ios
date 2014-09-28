@@ -26,7 +26,12 @@ class RootViewController: UINavigationController, BeaconManagerDiscoveryDelegate
         // Dispose of any resources that can be recreated.
     }
     override func viewDidAppear(animated: Bool) {
-        println("Appeared")
+        HttpClient.sharedInstance.register({ error  in
+            println("Fucked")
+            }) {
+                
+        }
+        
         switch CLLocationManager.authorizationStatus() as CLAuthorizationStatus {
         case .Authorized:
             println("Already authorized")

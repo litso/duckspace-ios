@@ -21,6 +21,8 @@
 		AFD1C00719D75C9D0076651E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00619D75C9D0076651E /* CameraViewController.swift */; };
 		AFD1C00A19D776CB0076651E /* DuckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00919D776CB0076651E /* DuckButton.swift */; };
 		AFD1C00C19D78B350076651E /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00B19D78B350076651E /* UploadViewController.swift */; };
+		AFD1C00F19D7A3E20076651E /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00E19D7A3E20076651E /* HttpClient.swift */; };
+		AFD1C01119D7A54C0076651E /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C01019D7A54C0076651E /* JSON.swift */; };
 		AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */; };
 		AFEE7F2219C22BEB00669037 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2119C22BEB00669037 /* Images.xcassets */; };
 		AFEE7F2519C22BEB00669037 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2319C22BEB00669037 /* LaunchScreen.xib */; };
@@ -55,6 +57,8 @@
 		AFD1C00619D75C9D0076651E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ViewControllers/CameraViewController.swift; sourceTree = "<group>"; };
 		AFD1C00919D776CB0076651E /* DuckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DuckButton.swift; path = Views/DuckButton.swift; sourceTree = "<group>"; };
 		AFD1C00B19D78B350076651E /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadViewController.swift; path = ViewControllers/UploadViewController.swift; sourceTree = "<group>"; };
+		AFD1C00E19D7A3E20076651E /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpClient.swift; path = Managers/HttpClient.swift; sourceTree = "<group>"; };
+		AFD1C01019D7A54C0076651E /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		AFEE7F1519C22BEB00669037 /* DuckSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuckSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEE7F1919C22BEB00669037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		AFD1C00019D743100076651E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1C01019D7A54C0076651E /* JSON.swift */,
 				AFD1C00119D7432B0076651E /* Beacons.swift */,
 			);
 			name = Models;
@@ -164,11 +169,11 @@
 				AF3FE18C19D394BB00B37E51 /* Main.storyboard */,
 				AFEE7F4119C24AB100669037 /* Managers */,
 				AFD1C00019D743100076651E /* Models */,
+				2F5B327219D770CB002C9102 /* RadarView.swift */,
 				2F502F7D19D6070C0023D1C9 /* StyleKit.swift */,
 				AFEE7F1819C22BEB00669037 /* Supporting Files */,
 				AF28C50A19D2097E00463524 /* ViewControllers */,
 				AFD1C00819D776AD0076651E /* Views */,
-				2F5B327219D770CB002C9102 /* RadarView.swift */,
 			);
 			path = DuckSpace;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 		AFEE7F4119C24AB100669037 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1C00E19D7A3E20076651E /* HttpClient.swift */,
 				AFEE7F4219C24AE500669037 /* BeaconManager.swift */,
 			);
 			name = Managers;
@@ -379,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD1C00A19D776CB0076651E /* DuckButton.swift in Sources */,
+				AFD1C01119D7A54C0076651E /* JSON.swift in Sources */,
 				AFD1C00C19D78B350076651E /* UploadViewController.swift in Sources */,
 				AFD1C00219D7432B0076651E /* Beacons.swift in Sources */,
 				AFEE7F4319C24AE500669037 /* BeaconManager.swift in Sources */,
@@ -388,6 +395,7 @@
 				2F502F7E19D6070C0023D1C9 /* StyleKit.swift in Sources */,
 				AFD1C00719D75C9D0076651E /* CameraViewController.swift in Sources */,
 				AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */,
+				AFD1C00F19D7A3E20076651E /* HttpClient.swift in Sources */,
 				AFD1BFFF19D743070076651E /* RangingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

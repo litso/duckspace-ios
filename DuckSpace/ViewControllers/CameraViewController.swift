@@ -15,6 +15,7 @@ class CameraViewController: UIViewController {
     var previewLayer: AVCaptureVideoPreviewLayer?
     var snapper: AVCaptureStillImageOutput?
     var mySelfie: UIImage?
+    var mySelfieData: NSData?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,6 +65,7 @@ class CameraViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue()) {
                 self.session?.stopRunning()
                 self.mySelfie = image
+                self.mySelfieData = data
                 self.performSegueWithIdentifier("UploadViewSegue", sender: self)
                 return
             }
@@ -78,5 +80,6 @@ class CameraViewController: UIViewController {
         // Pass the selected object to the new view controller.
         let uploadVC = segue.destinationViewController as UploadViewController
         uploadVC.mySelfie = mySelfie
+        uploadVC.mySelfieData = mySelfieData
     }
 }
