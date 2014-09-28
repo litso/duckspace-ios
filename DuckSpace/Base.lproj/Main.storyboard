@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="me9-NR-0bM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="me9-NR-0bM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -134,11 +134,62 @@
                     </view>
                     <connections>
                         <outlet property="cameraPreview" destination="GJj-7C-pGO" id="UL9-jT-RTi"/>
+                        <segue destination="aG9-jv-ot4" kind="show" identifier="UploadViewSegue" id="Qym-uv-jOJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYM-k6-ygL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2734" y="731"/>
+        </scene>
+        <!--Upload View Controller-->
+        <scene sceneID="Td3-iP-mTz">
+            <objects>
+                <viewController id="aG9-jv-ot4" customClass="UploadViewController" customModule="DuckSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i0m-Ke-RbY"/>
+                        <viewControllerLayoutGuide type="bottom" id="hWu-er-fb3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2fi-bb-CEC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mT-3h-YM3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjB-S6-fY3">
+                                <rect key="frame" x="275" y="530" width="50" height="30"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadButtonPressed:" destination="aG9-jv-ot4" eventType="touchUpInside" id="eRn-rD-fVd"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zeb-Nt-VdI">
+                                <rect key="frame" x="0.0" y="299" width="600" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="zeb-Nt-VdI" secondAttribute="centerX" id="1FT-PP-Y83"/>
+                            <constraint firstAttribute="centerX" secondItem="2mT-3h-YM3" secondAttribute="centerX" id="3iI-hm-FPT"/>
+                            <constraint firstAttribute="width" secondItem="zeb-Nt-VdI" secondAttribute="width" id="3qA-a1-A5X"/>
+                            <constraint firstAttribute="centerX" secondItem="tjB-S6-fY3" secondAttribute="centerX" id="IMw-te-4T8"/>
+                            <constraint firstItem="2mT-3h-YM3" firstAttribute="height" secondItem="2fi-bb-CEC" secondAttribute="height" id="MSm-HV-d8y"/>
+                            <constraint firstAttribute="centerY" secondItem="zeb-Nt-VdI" secondAttribute="centerY" id="j0d-NG-kVW"/>
+                            <constraint firstAttribute="centerY" secondItem="2mT-3h-YM3" secondAttribute="centerY" id="tkh-nF-Ctr"/>
+                            <constraint firstItem="2mT-3h-YM3" firstAttribute="width" secondItem="2fi-bb-CEC" secondAttribute="width" id="xhv-uW-Vr6"/>
+                            <constraint firstItem="hWu-er-fb3" firstAttribute="top" secondItem="tjB-S6-fY3" secondAttribute="bottom" constant="40" id="zoY-7Q-dIC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="2mT-3h-YM3" id="6Zc-f1-cRq"/>
+                        <outlet property="progressView" destination="zeb-Nt-VdI" id="Coo-o7-fRE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f30-he-4ja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3380" y="731"/>
         </scene>
         <!--Location Authorization View Controller-->
         <scene sceneID="QnH-T7-C6B">

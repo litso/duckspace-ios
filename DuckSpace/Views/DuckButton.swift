@@ -13,6 +13,10 @@ class DuckButton: UIButton {
         super.init(coder: aDecoder)
         addObserver(self, forKeyPath: "highlighted", options: NSKeyValueObservingOptions.New, context: nil)
     }
+
+    deinit {
+        removeObserver(self, forKeyPath: "highlighted")
+    }
     
     override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: [NSObject : AnyObject]!, context: UnsafeMutablePointer<Void>) {
         self .setNeedsDisplay()

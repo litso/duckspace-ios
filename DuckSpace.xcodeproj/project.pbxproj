@@ -20,6 +20,7 @@
 		AFD1C00519D75A1E0076651E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1C00419D75A1E0076651E /* AVFoundation.framework */; };
 		AFD1C00719D75C9D0076651E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00619D75C9D0076651E /* CameraViewController.swift */; };
 		AFD1C00A19D776CB0076651E /* DuckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00919D776CB0076651E /* DuckButton.swift */; };
+		AFD1C00C19D78B350076651E /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1C00B19D78B350076651E /* UploadViewController.swift */; };
 		AFEE7F1B19C22BEB00669037 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */; };
 		AFEE7F2219C22BEB00669037 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2119C22BEB00669037 /* Images.xcassets */; };
 		AFEE7F2519C22BEB00669037 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEE7F2319C22BEB00669037 /* LaunchScreen.xib */; };
@@ -53,6 +54,7 @@
 		AFD1C00419D75A1E0076651E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AFD1C00619D75C9D0076651E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ViewControllers/CameraViewController.swift; sourceTree = "<group>"; };
 		AFD1C00919D776CB0076651E /* DuckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DuckButton.swift; path = Views/DuckButton.swift; sourceTree = "<group>"; };
+		AFD1C00B19D78B350076651E /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadViewController.swift; path = ViewControllers/UploadViewController.swift; sourceTree = "<group>"; };
 		AFEE7F1519C22BEB00669037 /* DuckSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuckSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEE7F1919C22BEB00669037 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFEE7F1A19C22BEB00669037 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				AF28C50B19D209A000463524 /* LocationAuthorizationViewController.swift */,
 				AF28C50E19D20D1E00463524 /* RootViewController.swift */,
 				AFD1C00619D75C9D0076651E /* CameraViewController.swift */,
+				AFD1C00B19D78B350076651E /* UploadViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD1C00A19D776CB0076651E /* DuckButton.swift in Sources */,
+				AFD1C00C19D78B350076651E /* UploadViewController.swift in Sources */,
 				AFD1C00219D7432B0076651E /* Beacons.swift in Sources */,
 				AFEE7F4319C24AE500669037 /* BeaconManager.swift in Sources */,
 				AF28C50C19D209A000463524 /* LocationAuthorizationViewController.swift in Sources */,
